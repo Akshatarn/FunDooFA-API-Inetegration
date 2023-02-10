@@ -1,0 +1,51 @@
+<!-- <app-displaynote></app-displaynote> -->
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <img src="../../../assets/keep_2020q4_48dp.png" alt="">
+
+        <h1 class="example-app-name">FunDoo</h1>
+ 
+        <input class="search_bar" type="text"
+            placeholder="Search" id="logo">
+
+        <div class="five_icons">
+            <img style="margin-right : 20px; margin-left: 120px;" class="uperlogo"
+                src="../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            <img style="margin-right : 20px;" class="uperlogo"
+                src="../../../assets/view_stream_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            <img class="uperlogo" src="../../../assets/settings_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            <img class="settinglogo" src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            <img style="margin-left : 10px;" class="settinglogo"
+                src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="">
+        </div>
+
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav class="snav" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+            [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <mat-nav-list class="mat-nav-list">
+                
+                <a mat-list-item ><img class="img-style"
+                        src="../../../assets/lightbulb_FILL0_wght400_GRAD0_opsz48.png" alt=""> <span class="align-nav-content">Notes</span></a>
+                <a mat-list-item routerLink=""><img class="img-style"
+                        src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.png" alt=""><span class="align-nav-content">Remainder</span></a>
+                <a mat-list-item routerLink=""> <img class="img-style"
+                        src="../../../assets/edit_FILL0_wght400_GRAD0_opsz48.png" alt=""><span class="align-nav-content">Edit</span></a>
+                <a mat-list-item routerLink=""> <img class="img-style"
+                        src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.png" alt=""><span class="align-nav-content">Archieve</span></a>
+                <a mat-list-item routerLink="/home/trash"><img class="img-style"
+                        src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.png" alt=""><span class="align-nav-content">Trash</span></a>
+            </mat-nav-list>
+
+
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+
+            <!-- <app-get-allnotes></app-get-allnotes> -->
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

@@ -1,0 +1,95 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+.example-app-name {
+margin-left: 8px;
+// border: 1px solid black;
+position: relative;
+top: 10px;
+width:150px;
+}
+.example-sidenav-container {
+  flex: 1;
+  }
+.snav{
+  width: 218px;
+  
+}
+.img-style{
+  height: 20px; 
+  width: 20px;
+  //border: 1px solid black;
+}
+
+.mat-nav-list{
+  //border: 1px solid black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.align-nav-content{
+  //border: 1px solid black;
+    margin-bottom: 8px;
+    margin-left: 25px;
+    font-size: 21px;
+}
+.settinglogo{
+//   border: 1px solid black;
+position: relative;
+cursor: pointer;
+
+left: 40px;
+height: 30px;
+width: 30px;
+}
+.searchbar{
+  margin-left: 15px;
+   margin-top: 10px;
+   width: 35px;
+  //  padding: 4px 0px -9px 5px;
+  margin-bottom: -10px;
+}
+.example-is-mobile .example-toolbar {
+  position: fixed;
+    z-index: 2;
+  // margin-bottom: 10px;
+}
+.uperlogo{
+  position: relative;
+// margin-left: 5px;
+// margin-right: -50px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+
+}
+.search_bar{
+  height:50px; 
+  width: 850px; 
+  margin-left :5px;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+.five_icons{
+  //border: 1px solid black;
+  width: 700px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#logo{
+  background-image: url('https://www.shutterstock.com/image-vector/magnifying-glass-basic-vector-icon-600w-1690477978.jpg');
+  position: left;
+  padding-left: 40px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
