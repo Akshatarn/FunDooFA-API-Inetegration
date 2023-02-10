@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,EventEmitter, Output,Input, OnInit } from '@angular/core';
 import { NotesService } from 'src/app/services/notesservices/notes.service';
 
 @Component({
@@ -13,6 +13,8 @@ trashlist=[];
   constructor(private noteservice: NotesService) {
 
   }
+  @Output()
+   displaytogetallnotes=new EventEmitter<string>();
   ngOnInit(): void {
     this.trashList()
   }
@@ -26,6 +28,11 @@ trashlist=[];
         return notedata.isTrash==true;
       })
     })
+  }
+  receiveMessagefromdisplaycard($event:any){
+    console.log("withingetallnotes",$event);
+    this.trashList()
+    
   }
 
 }

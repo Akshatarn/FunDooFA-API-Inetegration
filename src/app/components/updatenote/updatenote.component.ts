@@ -7,24 +7,35 @@ import { NotesService } from 'src/app/services/notesservices/notes.service';
   styleUrls: ['./updatenote.component.scss']
 })
 export class UpdatenoteComponent {
-  title:any
-  // description:any
+  title:any;
+  description:any;
+  noteID:any;
+
   constructor(private noteservice: NotesService,
     public dialogRef: MatDialogRef<UpdatenoteComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
   ) {
     console.log(data);
     if(data){
-      this.title=data.title
+      this.title=data.title,
+      this.description=data.desciption,
+      this.noteID=data.noteID
     }
     
   }
 
   onNoClick(): void {
     console.log("updated title",this.title);
-    // this.noteservice.updatenote().subscribe((request:any)=>{
-
-    // })
+    let payload = {
+      title:this.title,
+      desciption:this.description,
+      noteID:this.noteID
+    } 
+    console.log(payload);
+    this.noteservice.updatenotes(payload).subscribe((response:any) =>{
+      console.log(response);
+      this.dialogRef.close(response);
+    })
     this.dialogRef.close();
   }
 }

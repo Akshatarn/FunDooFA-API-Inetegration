@@ -1,4 +1,5 @@
 <div class="dialog">
-    <input type="text" [(ngModel)]="title">
-    <button (click)="onNoClick()">Close</button>
+    <input matInput type="text" class="titleInput" [(ngModel)]="title">
+    
+    <button mat-flat-button class="close" (click)="onNoClick()">Close</button>
 </div>

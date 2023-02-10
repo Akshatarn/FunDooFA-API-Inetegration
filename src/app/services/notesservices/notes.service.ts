@@ -45,7 +45,7 @@ export class NotesService {
     }
     return this.httpservice.delete(`Notes/DeleteNote?noteId=${data.noteId}`, data, true, headerOptions);
   }
-  updatenote(data:any){
+  updatenotes(data:any){
     this.token =localStorage.getItem('token')
     let headerOptions = {
       headers: new HttpHeaders({
@@ -53,7 +53,7 @@ export class NotesService {
         'Authorization':" Bearer "+ this.token
       })
     }
-    return this.httpservice.Put(`Notes/UpdateNote?noteId=${data.noteId}`,data,true,headerOptions)
+    return this.httpservice.Put("Notes/UpdateNote?noteId="+data.noteID,data,true,headerOptions)
   }
   }
 

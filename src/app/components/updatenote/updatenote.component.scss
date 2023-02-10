@@ -2,3 +2,21 @@
     height: 200px;
     width: 300px;
 }
+.titleInput{
+    padding: 14px 16px 12px 16px;
+    height: 48px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #202124;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+.close{
+display: flex;
+justify-content: flex-end;
+align-items: end;
+border: 1px solid black;
+height: 30px;
+}
