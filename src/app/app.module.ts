@@ -28,7 +28,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ArchiveComponent } from './components/archive/archive/archive.component';
 import { ColorChangeComponent } from './components/changeColor/color-change/color-change.component';
-import { NotesComponent } from './components/notes/notes/notes.component';
+
 
 
 @NgModule({
@@ -47,7 +47,7 @@ import { NotesComponent } from './components/notes/notes/notes.component';
     UpdatenoteComponent,
     ArchiveComponent,
     ColorChangeComponent,
-    NotesComponent,
+
   ],
   imports: [
     BrowserModule,

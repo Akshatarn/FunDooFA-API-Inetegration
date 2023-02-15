@@ -12,7 +12,7 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
 import { TrashnotesComponent } from './components/trashnotes/trashnotes.component';
 
 const routes: Routes = [
-  //  {path:'', component:DashboardComponent},
+   {path:'', component:LoginComponent},
   { path: 'signup', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'resetpassword', component: ResetpasswordComponent },
