@@ -43,7 +43,7 @@ export class NotesService {
         'Authorization':" Bearer "+ this.token
       })
     }
-    return this.httpservice.delete(`Notes/Trashed?noteId=${data.noteId}`, data, true, headerOptions);
+    return this.httpservice.delete(`Notes/DeleteNote?noteId=${data.noteId}`, data, true, headerOptions);
   }
   updatenotes(data:any){
     this.token =localStorage.getItem('token')
@@ -63,6 +63,24 @@ export class NotesService {
       })
     }
     return this.httpservice.Put(`Notes/ArchieveOrUnArchieve?noteId=${data.noteId}`, data, true, header);
+  }
+  getalltrashnotes(data:any){
+    let header ={
+      headers : new HttpHeaders({
+        'Content-type': 'appplication/json',
+        'Authorization': 'Bearer'+this.token
+      })
+    }
+    return this.httpservice.Put(`Notes/Trashed?noteId=${data.noteId}`, data, true, header);
+  }
+  changeColor(data: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpservice.Put(`Notes/ChangeColor?noteId=${data.noteId}&color=${data.color}`, data, true, header);
   }
   }
 

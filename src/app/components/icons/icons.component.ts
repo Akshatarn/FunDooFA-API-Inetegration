@@ -24,7 +24,7 @@ export class IconsComponent implements OnInit {
     }
     console.log(data)
     this.noteservice.deletenote(data).subscribe((response:any)=>{
-      console.log(response);      
+      console.log(response);
     })
   }
 

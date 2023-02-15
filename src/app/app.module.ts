@@ -27,6 +27,8 @@ import { TrashnotesComponent } from './components/trashnotes/trashnotes.componen
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ArchiveComponent } from './components/archive/archive/archive.component';
+import { ColorChangeComponent } from './components/changeColor/color-change/color-change.component';
+import { NotesComponent } from './components/notes/notes/notes.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { ArchiveComponent } from './components/archive/archive/archive.component
     TrashnotesComponent,
     UpdatenoteComponent,
     ArchiveComponent,
+    ColorChangeComponent,
+    NotesComponent,
   ],
   imports: [
     BrowserModule,

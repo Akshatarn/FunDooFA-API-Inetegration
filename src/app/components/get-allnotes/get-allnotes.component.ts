@@ -22,6 +22,10 @@ export class GetAllnotesComponent implements OnInit {
       // console.log(this.Notelist);
     })
   }
+  receiveMessagefromdisplaycard($event: any) {
+    console.log("insidegetallnotes", $event);
+    this.getAllNotes()
+  }
   
  
 }

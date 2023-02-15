@@ -19,7 +19,7 @@ export class UpdatenoteComponent {
     console.log(data);
     if(data){
       this.title=data.title,
-      this.description=data.desciption,
+      this.description=data.description,
       this.noteID=data.noteID
     }
     
@@ -29,7 +29,7 @@ export class UpdatenoteComponent {
     console.log("updated title",this.title);
     let payload = {
       title:this.title,
-      desciption:this.description,
+      description:this.description,
       noteID:this.noteID
     } 
     console.log(payload);

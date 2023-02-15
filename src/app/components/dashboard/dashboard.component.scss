@@ -41,15 +41,11 @@ width:150px;
     margin-left: 25px;
     font-size: 21px;
 }
-// .settinglogo{
-// //   border: 1px solid black;
-// position: relative;
-// cursor: pointer;
-// margin-left: 10px;
-// left: 40px;
-// height: 30px;
-// width: 30px;
-// }
+.settinglogo{
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
 .searchbar{
   margin-left: 15px;
    margin-top: 10px;
@@ -62,16 +58,14 @@ width:150px;
     z-index: 2;
   // margin-bottom: 10px;
 }
-// .uperlogo{
-// position: relative;
-//  margin-left: 20px;
-//  margin-right: 120px;
-//   height: 30px;
-//   width: 30px;
-//   cursor: pointer;
+.uperlogo{
+
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
   
   
-// }
+}
 
 // .upperlogo1{
 //   position: relative;
@@ -91,10 +85,11 @@ width:150px;
 }
 .five_icons{
   //border: 1px solid black;
-  width: 400px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
   margin-left: 350px;
+  align-items: center;
 }
 .threelogo{
 display: flex;
@@ -178,7 +173,7 @@ justify-content: space-evenly;
   }
   .five_icons{
     //border: 1px solid black;
-    width: 600px;
+    width: 400px;
     margin-left: 10px;
 
   }

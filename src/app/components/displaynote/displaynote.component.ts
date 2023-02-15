@@ -1,4 +1,4 @@
-import {Component, Input,Inject, OnInit} from '@angular/core';
+import {Component, Input,EventEmitter,Output, OnInit} from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { Route } from '@angular/router';
 import { Router } from '@angular/router';
@@ -12,7 +12,10 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./displaynote.component.scss']
 })
 export class DisplaynoteComponent implements OnInit{
-  @Input() notelist: any;
+  @Input() 
+  notelist: any;
+  msg: any;
+  @Output() displaytogetallnotes=new EventEmitter<string>();
   constructor(private noteservice: NotesService,private route:Router,public dialog: MatDialog,private dataService:DataService){}
    
   ngOnInit(): void {
@@ -31,6 +34,11 @@ export class DisplaynoteComponent implements OnInit{
       console.log('The dialog was closed');
       // this.animal = result;
     });
+  }
+  recievefromiconstodisplaycard($event: any) {
+    console.log("recievedindisplay", $event);
+    this.msg = $event
+    this.displaytogetallnotes.emit(this.msg)
   }
   
   
