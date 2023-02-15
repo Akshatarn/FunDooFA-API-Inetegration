@@ -29,7 +29,7 @@ export class ArchiveComponent implements OnInit {
       this.notesArray = request.data;
       console.log(this.notesArray);
       this.notesArray = this.notesArray.filter((notedata:any)=>{
-        return notedata.archive ===false;
+        return notedata.archive ===true;
       })
     })
   }
