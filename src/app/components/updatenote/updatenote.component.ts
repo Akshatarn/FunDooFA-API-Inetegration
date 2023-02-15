@@ -10,6 +10,7 @@ export class UpdatenoteComponent {
   title:any;
   description:any;
   noteID:any;
+  notelist: any;
 
   constructor(private noteservice: NotesService,
     public dialogRef: MatDialogRef<UpdatenoteComponent>,

@@ -26,6 +26,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { TrashnotesComponent } from './components/trashnotes/trashnotes.component';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { ArchiveComponent } from './components/archive/archive/archive.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
     IconsComponent,
     TrashnotesComponent,
     UpdatenoteComponent,
+    ArchiveComponent,
   ],
   imports: [
     BrowserModule,

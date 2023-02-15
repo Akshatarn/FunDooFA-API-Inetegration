@@ -5,19 +5,25 @@
         <img src="../../../assets/keep_2020q4_48dp.png" alt="">
 
         <h1 class="example-app-name">FunDoo</h1>
- 
-        <input class="search_bar" type="text"
-            placeholder="Search" id="logo">
+       
+
+        <input class="search_bar" type="text"  (keyup)="searchNote($event)" id="logo">
 
         <div class="five_icons">
-            <img style="margin-right : 20px; margin-left: 120px;" class="uperlogo"
+            <div class="threelogo">
+                <img  class="uperlogo"
                 src="../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.png" alt="">
-            <img style="margin-right : 20px;" class="uperlogo"
+            <img class="uperlogo"
                 src="../../../assets/view_stream_FILL0_wght400_GRAD0_opsz48.png" alt="">
             <img class="uperlogo" src="../../../assets/settings_FILL0_wght400_GRAD0_opsz48.png" alt="">
-            <img class="settinglogo" src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.png" alt="">
-            <img style="margin-left : 10px;" class="settinglogo"
-                src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            </div>
+            
+            <div class="twologo">
+                <img class="settinglogo" src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                <img  class="settinglogo"
+                    src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            </div>
+            
         </div>
 
     </mat-toolbar>
@@ -26,17 +32,22 @@
         <mat-sidenav class="snav" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
             [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
             <mat-nav-list class="mat-nav-list">
-                
-                <a mat-list-item  routerLink="/home/getallnotes"><img class="img-style"
-                        src="../../../assets/lightbulb_FILL0_wght400_GRAD0_opsz48.png" alt=""> <span class="align-nav-content">Notes</span></a>
+
+                <a mat-list-item routerLink="/home/getallnotes"><img class="img-style"
+                        src="../../../assets/lightbulb_FILL0_wght400_GRAD0_opsz48.png" alt=""> <span
+                        class="align-nav-content">Notes</span></a>
                 <a mat-list-item routerLink=""><img class="img-style"
-                        src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.png" alt=""><span class="align-nav-content">Remainder</span></a>
+                        src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.png" alt=""><span
+                        class="align-nav-content">Remainder</span></a>
                 <a mat-list-item routerLink=""> <img class="img-style"
-                        src="../../../assets/edit_FILL0_wght400_GRAD0_opsz48.png" alt=""><span class="align-nav-content">Edit</span></a>
+                        src="../../../assets/edit_FILL0_wght400_GRAD0_opsz48.png" alt=""><span
+                        class="align-nav-content">Edit</span></a>
                 <a mat-list-item routerLink=""> <img class="img-style"
-                        src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.png" alt=""><span class="align-nav-content">Archieve</span></a>
+                        src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.png" alt=""><span
+                        class="align-nav-content">Archieve</span></a>
                 <a mat-list-item routerLink="/home/trash"><img class="img-style"
-                        src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.png" alt=""><span class="align-nav-content">Trash</span></a>
+                        src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.png" alt=""><span
+                        class="align-nav-content">Trash</span></a>
             </mat-nav-list>
 
 

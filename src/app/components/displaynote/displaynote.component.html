@@ -11,16 +11,19 @@
                 </span>
             </div>
         </div>
-        <div (click)="updateNote(note)" >
-            {{note.title}}
+        <div class="update">
+            <div (click)="updateNote(note)" >
+                {{note.title}}
+            </div>
+            <div (click)="updateNote(note)">
+                {{note.description}}
+            </div>
         </div>
-        <div (click)="updateNote(note)">
-            {{note.description}}
-        </div>
+        
         <div>
             <div>
-                <textarea matInput placeholder="Take a note..." [(ngModel)]="note.description"
-                    class="noteDescription"></textarea>
+                <!-- <textarea matInput placeholder="Take a note..." [(ngModel)]="note.description"
+                    class="noteDescription"></textarea> -->
                     <app-icons [noteCard]="note"></app-icons>
             </div>
         </div>
