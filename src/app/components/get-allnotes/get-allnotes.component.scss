@@ -1,5 +1,4 @@
 .maincontainer {
-    // border: 5px solid black;
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
@@ -25,14 +24,12 @@
   .iconstag3 {
     margin-left: 10px;
     cursor: pointer;
-    //  border: 1px solid black;
   
   
   }
   
   .iconspace {
     display: flex;
-    // border: 1px solid black;
     width: 400px;
     justify-content: space-between;
   align-items: center;
@@ -40,7 +37,6 @@
   }
   
   .closebutton {
-    // border: 1px solid black;
     position: relative;
     left: 100px;
     bottom: 5px;
@@ -85,9 +81,6 @@
   
   }
   
-  // .takeAnote1{
-  // //   border: 1px solid black;
-  // }
   .takeAnote textarea {
     width: 100%;
   }
@@ -96,7 +89,7 @@
     resize: none;
     white-space: nowrap;
     overflow-x: hidden;
-    /* or hidden */
+ 
   }
   
  .titleInput {
@@ -134,7 +127,7 @@
   .titleInputSection {
     position: relative;
   
-    // border: 1px solid black;
+
   }
   
   .titleImgSection {
@@ -152,7 +145,6 @@
   }
   @media only screen and (min-width: 300px) and (max-width: 900px){
     .maincontainer {
-    // border: 5px solid black;
     height: 1000px;
     width: 100%;
     margin-left: 10px;
