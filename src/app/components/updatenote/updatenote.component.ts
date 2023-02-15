@@ -1,4 +1,4 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject,Input,Output,EventEmitter} from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { NotesService } from 'src/app/services/notesservices/notes.service';
 @Component({
@@ -7,10 +7,11 @@ import { NotesService } from 'src/app/services/notesservices/notes.service';
   styleUrls: ['./updatenote.component.scss']
 })
 export class UpdatenoteComponent {
-  title:any;
+  @Input() title:any;
   description:any;
   noteID:any;
   notelist: any;
+  @Output() messageUpdateToDisplay = new EventEmitter<string>();
 
   constructor(private noteservice: NotesService,
     public dialogRef: MatDialogRef<UpdatenoteComponent>,
@@ -35,8 +36,12 @@ export class UpdatenoteComponent {
     console.log(payload);
     this.noteservice.updatenotes(payload).subscribe((response:any) =>{
       console.log(response);
+      new this.messageUpdateToDisplay(response);
       this.dialogRef.close(response);
+      
     })
     this.dialogRef.close();
+    
+
   }
 }

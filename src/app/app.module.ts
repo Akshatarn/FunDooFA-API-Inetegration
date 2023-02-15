@@ -28,6 +28,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ArchiveComponent } from './components/archive/archive/archive.component';
 import { ColorChangeComponent } from './components/changeColor/color-change/color-change.component';
+import { FilterPipe } from './components/pipe/filter.pipe';
 
 
 
@@ -47,6 +48,7 @@ import { ColorChangeComponent } from './components/changeColor/color-change/colo
     UpdatenoteComponent,
     ArchiveComponent,
     ColorChangeComponent,
+    FilterPipe,
 
   ],
   imports: [

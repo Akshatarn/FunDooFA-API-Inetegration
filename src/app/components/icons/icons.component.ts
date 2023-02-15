@@ -8,7 +8,7 @@ import { NotesService } from 'src/app/services/notesservices/notes.service';
 })
 export class IconsComponent implements OnInit {
   @Input() noteCard: any;
-  @Output() messageTrashToDisplay = new EventEmitter<string>();
+  @Output() messageToDisplay = new EventEmitter<string>();
   isDelete = false;
   isDeleted: any;
   notelist: any = [];
@@ -26,9 +26,10 @@ export class IconsComponent implements OnInit {
     console.log(data)
     this.noteservice.deletenote(data).subscribe((response:any)=>{
       console.log(response);
-      this.messageTrashToDisplay.emit(response);
+      this.messageToDisplay.emit(response);
     })
   }
+
   
 
 }

@@ -1,6 +1,6 @@
 
 <div class="maincontainer" >
-    <div class="takeAnote" *ngFor="let note of notelist" > 
+    <div class="takeAnote" *ngFor="let note of notelist " > 
         <div class="update">
             <div (click)="updateNote(note)" >
                 {{note.title}}
@@ -10,10 +10,9 @@
             </div>
         </div>
         
-        <div>
-            <div >
-                    <app-icons [noteCard]="note" (messageTrashToDisplay)="recievefromiconstodisplaycard($event)" ></app-icons>
-            </div>
+        <div class="hide">
+            <app-icons class="visble" [noteCard]="note" (messageTrashToDisplay)="recievefromiconstodisplaycard($event)" ></app-icons>
+                    
         </div>
         
     </div>

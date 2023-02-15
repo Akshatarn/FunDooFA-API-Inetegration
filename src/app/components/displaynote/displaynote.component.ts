@@ -15,12 +15,14 @@ export class DisplaynoteComponent implements OnInit{
   @Input() 
   notelist: any;
   msg: any;
+  Search:any;
   @Output() displaytogetallnotes=new EventEmitter<string>();
   constructor(private noteservice: NotesService,private route:Router,public dialog: MatDialog,private dataService:DataService){}
    
   ngOnInit(): void {
     this.dataService.recievedData.subscribe((res:any)=>{
-      console.log(res);      
+      console.log(res);
+      this.Search=res;      
     })
   }
    
@@ -32,7 +34,6 @@ export class DisplaynoteComponent implements OnInit{
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      // this.animal = result;
     });
   }
   recievefromiconstodisplaycard($event: any) {
