@@ -53,6 +53,39 @@ export class IconsComponent implements OnInit {
     })
    } 
 
+   colors : Array<any> = [
+    {code : '#fff',name:"white"},
+    {code : '#f28b82',name:"red"},
+    {code : '#fbbc04',name:"Orange"},
+    {code : '#ffff00',name:"yellow"},
+    {code : '#ccff90',name:"green"},
+    {code : '#a7ffeb',name:"teal"},
+    {code : '#cbf0f8',name:"blue"},
+    {code : '#aecbfa',name:"darkblue"},
+    {code : '#d7aefb',name:"lavender"},
+    {code : '#e6c9a8',name:"peach"},
+
+   ]
+   setColor(color:any){
+    console.log('color',color);
+    console.log(this.noteCard);
+    this.noteCard.color = color;
+    let data ={
+      color :color,
+      noteId:[this.noteCard.noteID]
+
+    }
+    console.log(data);
+    this.noteservice.changeColor(data).subscribe((response:any)=>{
+      console.log(response);
+      
+    })
+    
+
+    
+
+   }
+
   
 
 }

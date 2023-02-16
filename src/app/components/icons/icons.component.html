@@ -2,9 +2,17 @@
   <div class="iconspace">
     <a class="iconstag3"> <img class="image" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.png" > </a>
     <a class="iconstag3"> <img class="image" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.png" > </a>
-    <div>
-      <a class="iconstag3"> <img class="image"  src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.png" > </a>
-    </div>
+    <div role="button" class="add">
+      <div role="button" class="addcolor" [matMenuTriggerFor]="colormenu" aria-label="Example icon-button with a menu">
+        <a class="iconstag3"> <img class="image"  src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.png" > </a>
+        <mat-menu class="colorposition" #colormenu="matMenu">
+          <div class="colorclass" *ngFor="let color of colors">
+         <button class="color" mat-mini-fab (click)="setColor(color.name)" [style.background]="color.name"></button>
+          </div>
+        </mat-menu>
+      </div>
+    </div>   
+    
     <a class="iconstag3"> <img class="image" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.png">
     </a>
     <a class="iconstag3"> <img class="image" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.png"  (click)="archiveNote()"> </a>
