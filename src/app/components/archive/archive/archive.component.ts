@@ -21,13 +21,14 @@ export class ArchiveComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllNotes();
+    this.ArchiveList();
   }
-  getAllNotes(){
+  ArchiveList(){
     this.noteservice.getAllNote().subscribe((request:any)=> {
       console.log("request data", request);
       this.notesArray = request.data;
       console.log(this.notesArray);
+      this.notesArray = this.notesArray.reverse();
       this.notesArray = this.notesArray.filter((notedata:any)=>{
         return notedata.archive ===true;
       })
@@ -36,7 +37,7 @@ export class ArchiveComponent implements OnInit {
 
   receiveMessagefromdisplaycard($event: any) {
     console.log("insidegetallnotes", $event);
-    this.getAllNotes()
+    this.ArchiveList()
   }
 
 }

@@ -16,6 +16,7 @@ export class DisplaynoteComponent implements OnInit{
   notelist: any;
   msg: any;
   Search='';
+  subscription :any;
   @Output() displaytogetallnotes=new EventEmitter<string>();
   constructor(private noteservice: NotesService,private route:Router,public dialog: MatDialog,private dataService:DataService){}
    
@@ -36,7 +37,7 @@ export class DisplaynoteComponent implements OnInit{
       console.log('The dialog was closed');
     });
   }
-  recievefromiconstodisplaycard($event: any) {
+  receiveMsgIconsToDisplay($event: any) {
     console.log("recievedindisplay", $event);
     this.msg = $event
     this.displaytogetallnotes.emit(this.msg)
