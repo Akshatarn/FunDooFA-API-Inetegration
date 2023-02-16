@@ -1,5 +1,5 @@
 import {Component, Input,EventEmitter,Output, OnInit} from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef,} from '@angular/material/dialog';
 import { Route } from '@angular/router';
 import { Router } from '@angular/router';
 import { NotesService } from 'src/app/services/notesservices/notes.service';
@@ -15,7 +15,7 @@ export class DisplaynoteComponent implements OnInit{
   @Input() 
   notelist: any;
   msg: any;
-  Search:any;
+  Search='';
   @Output() displaytogetallnotes=new EventEmitter<string>();
   constructor(private noteservice: NotesService,private route:Router,public dialog: MatDialog,private dataService:DataService){}
    

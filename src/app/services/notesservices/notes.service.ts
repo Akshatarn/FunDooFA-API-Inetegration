@@ -65,6 +65,7 @@ export class NotesService {
     return this.httpservice.Put(`Notes/ArchieveOrUnArchieve?noteId=${data.noteId}`, data, true, header);
   }
   getalltrashnotes(data:any){
+    this.token = localStorage.getItem('token')
     let header ={
       headers : new HttpHeaders({
         'Content-type': 'appplication/json',

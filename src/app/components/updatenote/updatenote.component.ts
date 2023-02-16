@@ -11,7 +11,7 @@ export class UpdatenoteComponent {
   description:any;
   noteID:any;
   notelist: any;
-  @Output() messageUpdateToDisplay = new EventEmitter<string>();
+
 
   constructor(private noteservice: NotesService,
     public dialogRef: MatDialogRef<UpdatenoteComponent>,
@@ -36,7 +36,6 @@ export class UpdatenoteComponent {
     console.log(payload);
     this.noteservice.updatenotes(payload).subscribe((response:any) =>{
       console.log(response);
-      new this.messageUpdateToDisplay(response);
       this.dialogRef.close(response);
       
     })

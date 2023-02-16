@@ -24,11 +24,23 @@ export class IconsComponent implements OnInit {
       noteId:[this.noteCard.noteID]
     }
     console.log(data)
-    this.noteservice.deletenote(data).subscribe((response:any)=>{
+    this.noteservice.getalltrashnotes(data).subscribe((response:any)=>{
       console.log(response);
       this.messageToDisplay.emit(response);
     })
   }
+  archive(){
+    let req={
+      noteId:[this.noteCard.noteID],
+     isArchive:true,
+    }
+    console.log(req)
+    this.noteservice.archievenote(req).subscribe((response:any)=>{
+      console.log(response)
+      this.messageToDisplay.emit(response);
+    
+    })
+   } 
 
   
 

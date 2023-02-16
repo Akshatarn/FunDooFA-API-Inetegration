@@ -1,17 +1,14 @@
 
 <div class="maincontainer" >
-    <div class="takeAnote" *ngFor="let note of notelist " > 
-        <div class="update">
-            <div (click)="updateNote(note)" >
+    <div class="takeAnote" *ngFor="let note of notelist | filterPipe:Search " >
+            <div class="update" (click)="updateNote(note)" >
                 {{note.title}}
             </div>
-            <div (click)="updateNote(note)">
+            <div class="update" (click)="updateNote(note)">
                 {{note.description}}
-            </div>
-        </div>
-        
+            </div>        
         <div class="hide">
-            <app-icons class="visble" [noteCard]="note" (messageTrashToDisplay)="recievefromiconstodisplaycard($event)" ></app-icons>
+            <app-icons  [noteCard]="note" (messageTrashToDisplay)="recievefromiconstodisplaycard($event)" ></app-icons>
                     
         </div>
         
