@@ -52,6 +52,44 @@ export class IconsComponent implements OnInit {
     
     })
    } 
+   unArchive(){
+    let data={
+      noteId:[this.noteCard.noteID],
+     isArchive:false,
+    }
+    console.log(data)
+    this.noteservice.archievenote(data).subscribe((response:any)=>{
+      console.log(response)
+      this.displaytoIcons.emit(response);
+    
+   })
+  }
+   restoreNote(){
+    let data ={
+      noteId:[this.noteCard.noteID],
+      trash:false,
+    }
+    console.log(data);
+    this.noteservice.getalltrashnotes(data).subscribe((response:any)=>
+    {
+      console.log(response);
+      this.displaytoIcons.emit(response);
+      
+    })
+    
+   }
+   deleteNote(){
+    let data ={
+      noteId:[this.noteCard.noteID]
+    }
+    console.log(data);
+    this.noteservice.deletenote(data).subscribe((response:any)=>{
+      console.log(response);
+      this.displaytoIcons.emit(response);
+      
+    })
+    
+   }
 
    colors : Array<any> = [
     {code : '#fff',name:"white"},

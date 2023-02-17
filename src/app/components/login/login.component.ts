@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         console.log("login sucessfully", response)
         localStorage.setItem('token', response.data)
 
-        this.router.navigate(['home'])
+        this.router.navigate(['home/getallnotes'])
 
       })
     }

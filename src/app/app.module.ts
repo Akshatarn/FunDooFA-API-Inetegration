@@ -27,7 +27,7 @@ import { TrashnotesComponent } from './components/trashnotes/trashnotes.componen
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ArchiveComponent } from './components/archive/archive/archive.component';
-import { ColorChangeComponent } from './components/changeColor/color-change/color-change.component';
+
 
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 
@@ -49,7 +49,6 @@ import { FilterPipePipe } from './pipes/filter-pipe.pipe';
     TrashnotesComponent,
     UpdatenoteComponent,
     ArchiveComponent,
-    ColorChangeComponent,
     FilterPipePipe,
 
   ],
