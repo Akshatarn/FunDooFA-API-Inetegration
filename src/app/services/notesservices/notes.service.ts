@@ -69,7 +69,7 @@ export class NotesService {
     let header ={
       headers : new HttpHeaders({
         'Content-type': 'appplication/json',
-        'Authorization': 'Bearer'+this.token
+        'Authorization': 'Bearer '+this.token
       })
     }
     return this.httpservice.Put(`Notes/Trashed?noteId=${data.noteId}`, data, true, header);

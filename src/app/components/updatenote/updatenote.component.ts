@@ -25,7 +25,9 @@ export class UpdatenoteComponent {
     }
     
   }
-
+ updateAuto(){
+  this.dialogRef.close();
+ }
   onNoClick(): void {
     console.log("updated title",this.title);
     let payload = {
@@ -39,7 +41,7 @@ export class UpdatenoteComponent {
       this.dialogRef.close(response);
       
     })
-    this.dialogRef.close();
+    //this.dialogRef.close();
     
 
   }

@@ -35,9 +35,17 @@
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-     //width:600px; 
-   // border: 1px solid black;
+    width:400px; 
+   border: 1px solid black;
   }
+  ::ng-deep
+  .mat-mdc-menu-panel.mat-mdc-menu-panel {
+    min-width: 112px;
+    max-width: 400px; 
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
 
 .color{
   height: 30px;

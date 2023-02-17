@@ -7,7 +7,7 @@
         <a class="iconstag3"> <img class="image"  src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.png" > </a>
         <mat-menu class="colorposition" #colormenu="matMenu">
           <div class="colorclass" *ngFor="let color of colors">
-         <button class="color" mat-mini-fab (click)="setColor(color.name)" [style.background]="color.name"></button>
+         <button class="color" mat-mini-fab (click)="setColor(color)" [style.background]="color.name"></button>
           </div>
         </mat-menu>
       </div>

@@ -14,12 +14,12 @@ padding-left: 15px;
 }
 
 
-// .hide{
-//   visibility: hidden;
-// }
-// .takeAnote:hover .hide{
-//   visibility: visible;
-// }
+.hide{
+  visibility: hidden;
+}
+.takeAnote:hover .hide{
+  visibility: visible;
+}
 .takeAnote {
   width: 250px;
   margin: auto;
@@ -30,17 +30,7 @@ padding-left: 15px;
     margin-left: 10px;
   margin-right: 10px;
 }
- .titleInput {
-  padding: 14px 16px 12px 16px;
-  height: 48px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #202124;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  border-radius: 8px;
-}
+
 
 
 
@@ -64,16 +54,12 @@ padding-left: 15px;
     margin-left: 10px;
   margin-right: 10px;
   }
-   .titleInput {
-    padding: 14px 16px 12px 16px;
-    height: 48px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #202124;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    border-radius: 8px;
+  .hide{
+    visibility: hidden;
   }
+  .takeAnote:hover .hide{
+    visibility: visible;
+  }
+
  
 }
