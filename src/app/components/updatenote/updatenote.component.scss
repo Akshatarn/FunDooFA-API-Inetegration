@@ -8,15 +8,17 @@
     overflow: hidden;
     border-radius: 8px;
     width: 600px;
-    height: 185px;
+    height: 150px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
   }
   .icons{
     display: flex;
     margin-right: 70px;
     width: 400px;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-bottom: 50px;
+
   }
  
 .takeAnote {
@@ -27,6 +29,7 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    
 
 
 }
@@ -43,15 +46,18 @@
     resize: none;
     width:550px;
     padding-left: 5px;
+    padding-bottom: 3px;
 }
 .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 600px;
-    margin-top: 45px;
+    margin-top: 7px;
+
 }
 .closebutton {
    margin-right: 20px;
-  margin-top: 13px;
+  margin-bottom: 40px;
+ 
 }

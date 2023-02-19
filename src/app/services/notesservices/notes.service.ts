@@ -81,7 +81,9 @@ export class NotesService {
         'Authorization': 'Bearer ' + this.token
       })
     }
-    return this.httpservice.Put(`Notes/ChangeColor?noteId=${data.noteId}&color=${data.color}`, data, true, header);
+    console.log(data.color);
+    
+    return this.httpservice.Put(`Notes/ChangeColor?noteId=${data.noteId}&color=${data.color}`,{}, true, header);
   }
   }
 

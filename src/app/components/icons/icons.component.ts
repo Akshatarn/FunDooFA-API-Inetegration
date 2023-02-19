@@ -105,12 +105,12 @@ export class IconsComponent implements OnInit {
 
    ]
    setColor(color:any){
-    console.log('color',color);
+    console.log('color',color.name);
     console.log(this.noteCard);
     this.noteCard.color = color;
     let data ={
-      color :color,
-      noteId:[this.noteCard.noteID]
+      color :color.name,
+      noteId:this.noteCard.noteID
 
     }
     console.log(data);
@@ -118,10 +118,7 @@ export class IconsComponent implements OnInit {
       console.log(response);
       
     })
-    
-
-    
-
+  
    }
 
   
