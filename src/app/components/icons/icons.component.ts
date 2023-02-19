@@ -101,7 +101,7 @@ export class IconsComponent implements OnInit {
     {code : '#cbf0f8',name:"blue"},
     {code : '#aecbfa',name:"darkblue"},
     {code : '#d7aefb',name:"lavender"},
-    {code : '#e6c9a8',name:"peach"},
+    {code : '#e6c9a8',name:"pink"},
 
    ]
    setColor(color:any){
