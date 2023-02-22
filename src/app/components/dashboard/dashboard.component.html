@@ -7,7 +7,7 @@
         <h1 class="example-app-name">FunDoo</h1>
        
 
-        <input class="search_bar" type="text"  (keyup)="searchNote($event)" id="logo">
+        <input class="search_bar" type="text"  (keyup)="searchNote($event)" id="logo"  [class.example-is-mobile]="mobileQuery.matches">
 
         <div class="five_icons">
             <div class="threelogo">

@@ -15,8 +15,5 @@ export class FilterPipePipe implements PipeTransform {
     return value?.filter((note:any)=>{
       return note.title.toLowerCase().includes(args) | note.description.toLowerCase().includes(args);
     })
-    // return value.filter((note:any)=>{
-    //   return note.title.toLowerCase().includes(args) | note.description.toLowerCase().includes(args);
-    // })
   }
 }
